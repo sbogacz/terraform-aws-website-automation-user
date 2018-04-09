@@ -3,7 +3,7 @@
 # NOTE: programmatic access keys will have to be created manually from the 
 # AWS console
 resource "aws_iam_user" "automation_user" {
-  name = "${var.domain} automation user"
+  name = "${var.domain}_automation_user"
 }
 
 locals {
@@ -41,7 +41,7 @@ data "aws_iam_policy_document" "automation_user_policy" {
 }
 
 resource "aws_iam_policy" "automation_user_policy" {
-  name   = "IAM policy for ${var.domain} automation user"
+  name   = "${var.domain}_automation_user_policy"
   policy = "${data.aws_iam_policy_document.automation_user_policy.json}"
 }
 

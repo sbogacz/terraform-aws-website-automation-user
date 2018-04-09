@@ -1,2 +1,3 @@
 # aws-website-automation-user
-A terraform module to create the necessary IAM resources for an automation user that will be updating S3 and CloudFront resources
+
+This module is used to create automation users (think, CI/CD users, e.g. CircleCI, TravisCI, BuildKite, etc.). It can be used independently, or in conjunction with the [terraform-website module](https://github.com/sbogacz/terraform-website) module. 

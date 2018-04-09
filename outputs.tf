@@ -5,5 +5,5 @@ output "user_name" {
 
 output "user_arn" {
   description = "the IAM user's ARN"
-  value       = "${aws_iam_user.automation_user.aen}"
+  value       = "${aws_iam_user.automation_user.arn}"
 }
